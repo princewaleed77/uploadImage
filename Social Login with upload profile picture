@@ -1,0 +1,7 @@
+installation:
+get your client_id and client_secret from your social site.
+put the values in " .env" file.
+create database as stated in ".env" file.
+run php artisan migrate.
+done
+
