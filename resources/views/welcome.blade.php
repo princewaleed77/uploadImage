@@ -40,6 +40,7 @@
               <div class="header text-center">
                   <h4 class="text-danger">MY FISRT PROJECT ON HOW TO </h4>
                   <h1>Upload Profile Picture with Crop</h1>
+                  <p>using "ijaboCropTool"</p>
                 </div>
         </div>
 

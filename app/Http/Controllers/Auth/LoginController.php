@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Exception;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
@@ -88,7 +89,7 @@ class LoginController extends Controller
         $user = Socialite::driver('github')->user();
 
         $this->_registerOrLoginUser($user);
-
+        
         // Return home after login
         return redirect()->route('home');
     }
@@ -106,5 +107,6 @@ class LoginController extends Controller
         }
 
         Auth::login($user);
+        
     }
 }

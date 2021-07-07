@@ -44,12 +44,12 @@
                     <ul class="navbar-nav ml-auto">
                         {{-- profile image --}}
                         @auth
-                               <li class="nav-item">
-                            <img src='{{ asset("uploads/Auth::user()->avatar") }}' id="rr" alt="{{Auth::user()->name}}"
-                                class="image-previewer float-right mr-3 rounded-circle" width="10%">
-                        </li>
+                            <li class="nav-item">
+                                <img src="{{ asset("uploads/$user->avatar") }}" 
+                                    alt="" class="image-previewer rounded-circle float-right" width="40px">
+                            </li>
                         @endauth
-                     
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -72,7 +72,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
